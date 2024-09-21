@@ -1,5 +1,5 @@
 FROM node:20.16.0
-LABEL authors="FJavierGtzMedrano"
+LABEL authors="javierguti08"
 WORKDIR /app
 COPY package*.json ./
 RUN npm install
