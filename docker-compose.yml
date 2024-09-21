@@ -2,7 +2,7 @@ version: "3.8"
 
 services:
   # api:
-  #   image: FJavierGtzM/api:latest
+  #   image: javierguti08/api:latest
   #   container_name: api
   #   environment:
   #     - PORT=${PORT}

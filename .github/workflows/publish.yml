@@ -17,12 +17,12 @@ jobs:
         run: docker login -u "${{ secrets.DOCKERHUB_USERNAME }}" -p "${{ secrets.DOCKERHUB_TOKEN }}"
 
       - name: Build Docker Image
-        run: docker build -t arturoenqz/api:${{ github.sha }} .
+        run: docker build -t javierguti08/api:${{ github.sha }} .
 
       - name: Tag Latest
-        run: docker tag arturoenqz/api:${{ github.sha }} arturoenqz/api:latest
+        run: docker tag javierguti08/api:${{ github.sha }} javierguti08/api:latest
 
       - name: Push Docker Image
         run: |
-          docker push arturoenqz/api:${{ github.sha }}
-          docker push arturoenqz/api:latest
+          docker push javierguti08/api:${{ github.sha }}
+          docker push javierguti08/api:latest
