@@ -1,22 +1,22 @@
 version: "3.8"
 
 services:
-  # api:
-  #   image: javierguti08/api:latest
-  #   container_name: api
-  #   environment:
-  #     - PORT=${PORT}
-  #     - MONGO_URL=${MONGO_URL}
-  #     - MAIL_SECRET_KEY=${MAIL_SECRET_KEY}
-  #     - MAIL_SERVICE=${MAIL_SERVICE}
-  #     - MAIL_USER=${MAIL_USER}
-  #     - MAPBOX_TOKEN=${MAPBOX_TOKEN}
-  #   ports:
-  #     - "3000:3000"
-  #   depends_on:
-  #     - mongo
+   api:
+     image: javierguti08/api:latest
+     container_name: api
+     environment:
+       - PORT=${PORT}
+       - MONGO_URL=mongodb://root:root@mongo:27017
+       - MAIL_SECRET_KEY=${MAIL_SECRET_KEY}
+       - MAIL_SERVICE=${MAIL_SERVICE}
+       - MAIL_USER=${MAIL_USER}
+       - MAPBOX_TOKEN=${MAPBOX_TOKEN}
+     ports:
+       - "3000:3000"
+     depends_on:
+       - mongo
 
-  mongo:
+mongo:
     image: mongo
     container_name: mongo
     environment:
